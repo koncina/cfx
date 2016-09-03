@@ -16,22 +16,22 @@ devtools::install_git('https://github.com/koncina/cfx.git')
 ```r
 # Load amplification curves
 c(example = "./example") %>%
-  map(list.cfx) %>%
-  map_df(load.amplification, .id = "experiment")
+  map(list_cfx) %>%
+  map_df(read_amplification, .id = "experiment")
 
 # Load melt curves
 c(example = "./example") %>%
-  map(list.cfx) %>%
-  map_df(load.meltcurve, .id = "experiment") 
+  map(list_cfx) %>%
+  map_df(read_meltcurve, .id = "experiment") 
 
-# Load ct values
+# Load Cq values
 c(example = "./example") %>%
-  map(list.cfx) %>%
-  map_df(load.ct, .id = "experiment") 
+  map(list_cfx) %>%
+  map_df(read_cq, .id = "experiment") 
 
 # Load detected melt curve peaks
 c(example = "./example") %>%
-  map(list.cfx) %>%
-  map_df(load.meltpeak, .id = "experiment")
+  map(list_cfx) %>%
+  map_df(read_meltpeak, .id = "experiment")
 ```
 
