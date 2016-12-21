@@ -14,24 +14,19 @@ devtools::install_git('https://github.com/koncina/cfx.git')
 
 
 ```r
+# Provide the path to the Run information file or the folder name containing a single CFX dataset
+f <- "/path/to/cfx_test_run_Run Information.csv"
+
 # Load amplification curves
-c(example = "./example") %>%
-  map(list_cfx) %>%
-  map_df(read_amplification, .id = "experiment")
+read_amplification(f)
 
 # Load melt curves
-c(example = "./example") %>%
-  map(list_cfx) %>%
-  map_df(read_meltcurve, .id = "experiment") 
+read_meltcurve(f)
 
 # Load Cq values
-c(example = "./example") %>%
-  map(list_cfx) %>%
-  map_df(read_cq, .id = "experiment") 
+read_cq(f)
 
 # Load detected melt curve peaks
-c(example = "./example") %>%
-  map(list_cfx) %>%
-  map_df(read_meltpeak, .id = "experiment")
+read_meltpeak(f)
 ```
 

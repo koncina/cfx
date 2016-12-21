@@ -4,10 +4,10 @@
 \alias{read_meltpeak}
 \title{Load the melt cruve peaks calculated by the CFX Manager software}
 \usage{
-read_meltpeak(cfx_set)
+read_meltpeak(cfx_run)
 }
 \arguments{
-\item{cfx_set}{a string basename combining the folder and the common prefix of exported csv files. Use list_cfx to list the different sets in a folder.}
+\item{cfx_run}{a string with the path to the CFX run information file or a folder containing a single run information file.}
 }
 \value{
 A dataframe containing the peak informations
